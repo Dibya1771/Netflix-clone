@@ -1,0 +1,89 @@
+.list {
+  > .row {
+    flex-direction: column;
+    margin: 0;
+  }
+  .title {
+    margin: 30px;
+    margin-bottom: 0;
+  }
+  .row__posters {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px 0 20px 0;
+  }
+
+  .row__posters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .row__poster {
+    margin-right: 10px;
+    max-height: 100px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: transform 0.45s;
+    width: 100%;
+  }
+
+  .row__poster:hover {
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  .row__posterLarge {
+    max-height: 250px;
+  }
+
+  .row__posterLarge:hover {
+    opacity: 1;
+    transform: scale(1.09);
+  }
+}
+/* Add these styles to center the trailer */
+.trailer-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent background */
+  z-index: 9999; /* Ensure it appears on top of other content */
+}
+
+.trailer {
+  width: 100%; /* Adjust the width of the trailer as needed */
+}
+
+/* Style the close button for the no-trailer message */
+.no-trailer-message button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.no-trailer-message button:hover {
+  background-color: #0056b3;
+}
+/* Add this style for the close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background-color: #ddd;
+}
